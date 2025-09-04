@@ -1,26 +1,81 @@
-<h1 class="title">{{ title }}</h1>
-<p>
-  A blazing fast frontend development starter template, bundled using
-  <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer"
-    >Parcel</a
-  >. ✨
-</p>
-<div class="get-started">
-  <a
-    href="https://app.netlify.com/start/deploy?repository=https://github.com/aileen-r/parcel-html-css-js-starter-template"
-    target="_blank"
-    rel="noopener noreferrer"
-    ><img src="url:./assets/deploy-to-netlify.svg" alt="Deploy to Netlify"
-  /></a>
-  <a
-    class="github-button"
-    href="https://github.com/aileen-r/parcel-html-css-js-starter-template"
-    target="_blank"
-    rel="noopener noreferrer"
-    ><img
-      src="url:./assets/octocat.svg"
-      alt="GitHub Octocat icon"
-    />
-    Source Code</a
-  >
-</div>
+<header class="Header">
+	<a href="https://gsap.com/docs/v3/">
+		<svg
+			class="Header__logo"
+			viewBox="0 0 231 231"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M181.426 107.888C181.426 107.888 181.426 107.951 181.426 107.989L173.234 143.914C172.792 145.946 170.785 147.436 168.463 147.436H158.579C157.847 147.436 157.19 147.928 156.988 148.635C147.862 179.927 135.504 201.437 119.183 214.35C105.297 225.345 88.1806 230.47 65.3205 230.47C44.7703 230.47 30.9229 223.792 19.171 210.614C3.64473 193.194 -2.78035 164.679 1.10752 130.319C8.12588 65.8159 41.2233 0.732005 104.982 0.732005C124.371 0.555284 139.594 6.60168 150.185 18.6692C161.381 31.431 167.074 50.6558 167.099 75.8133C167.061 78.0981 165.181 79.941 162.921 79.941H116.216C114.563 79.941 113.086 78.4389 113.111 76.7853C112.732 59.3909 107.62 50.9082 97.4711 50.9082C79.5718 50.9082 69.0064 75.4725 63.4018 89.0927C55.5756 108.115 51.5993 128.767 52.3819 149.342C52.748 158.923 54.2754 172.392 63.2756 177.971C71.2533 182.919 82.6392 179.637 89.5313 174.159C96.4234 168.68 101.965 159.201 104.3 150.554C104.628 149.355 104.654 148.421 104.338 148.004C104.01 147.575 103.101 147.474 102.407 147.474H90.4149C89.1273 147.474 87.8524 146.881 87.0824 145.921C86.4387 145.113 86.1862 144.116 86.4134 143.132L94.6183 107.143C95.0223 105.301 96.6759 103.912 98.7082 103.66V103.571H177.412C177.602 103.571 177.791 103.571 177.968 103.609C180.013 103.874 181.452 105.793 181.414 107.888H181.426Z"
+				fill="#FFFCE1"
+			/>
+		</svg>
+	</a>
+	<p class="Header__text">learn - play - create</p>
+
+	<button
+		id="menu"
+		class="Header__menu-button"
+		aria-label="Navigation menu"
+		aria-expanded="false"
+		aria-controls="nav"
+	>
+		menu
+		<svg
+			class="Header__menu-icon"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="60 0 15 22"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<g>
+				<path
+					d="M68.707 5.53711L66.2013 16.3499"
+					stroke="#FFFCE1"
+					stroke-width="2.5"
+				></path>
+				<path
+					d="M73 10.9365L62 10.9365"
+					stroke="#FFFCE1"
+					stroke-width="2.5"
+				></path>
+			</g>
+		</svg>
+	</button>
+
+	<nav id="nav" class="Menu">
+		<ul class="Menu__list">
+			<li class="Menu__item">
+				<a href="#" data-anim="split-word" class="Menu__link">Blog</a>
+			</li>
+			<li class="Menu__item">
+				<a href="#" data-anim="split-word" class="Menu__link">About</a>
+			</li>
+			<li class="Menu__item">
+				<a href="#" data-anim="split-word" class="Menu__link">Services</a>
+			</li>
+			<li class="Menu__item">
+				<a href="#" data-anim="split-word" class="Menu__link">Portfolio</a>
+			</li>
+			<li class="Menu__item">
+				<a href="#" data-anim="split-word" class="Menu__link">Contact us</a>
+			</li>
+		</ul>
+
+		<div class="Menu__list Menu__list--details">
+			<p class="Menu__label">Socials</p>
+			<div class="Menu__socials">
+				<a href="#" class="Menu__link Menu__link--social">X / Twitter</a>
+				<a href="#" class="Menu__link Menu__link--social">Instagram</a>
+				<a href="#" class="Menu__link Menu__link--social">Dribbble</a>
+				<a href="#" class="Menu__link Menu__link--social">YouTube</a>
+			</div>
+		</div>
+		<div class="Menu__list Menu__list--newsletter">
+			<a href="#" class="Menu__link Menu__link--social"
+				>Sign up to our newsletter</a
+			>
+		</div>
+	</nav>
+</header>

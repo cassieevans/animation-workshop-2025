@@ -1,6 +1,5 @@
-import helloWorld from "./scripts/helloWorld";
-import Prism from 'prismjs';
+import hero from './scripts/hero';
+import header from './scripts/header';
 
-import 'prismjs/themes/prism-coy.css'
-
-helloWorld();
+header();
+hero();
