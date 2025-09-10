@@ -1,0 +1,14 @@
+.Goodbye {
+	overflow: hidden;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.Goodbye__text {
+	display: flex;
+	width: max-content;
+	white-space: nowrap;
+	gap: 4vw;
+	padding-left: 100vw;
+}

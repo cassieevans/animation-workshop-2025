@@ -1,9 +1,17 @@
+.Hero {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .Hero__image {
 	position: fixed;
 	opacity: 0;
 	width: 200px;
 	aspect-ratio: 1/1;
 	object-fit: cover;
+	border-radius: 10px;
 }
 
 .Hero__text {

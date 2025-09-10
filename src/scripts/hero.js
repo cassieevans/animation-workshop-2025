@@ -5,32 +5,13 @@ const prefersReducedMotion = window.matchMedia(
 ).matches;
 
 const hero = () => {
-	if (prefersReducedMotion) return;
-	function playAnimation(shape) {
+	function playAnimation(img) {
 		// the timeline
 		let tl = gsap.timeline();
-		tl.from(shape, {
+		tl.from(img, {
 			opacity: 0,
 			duration: 0.1
-		})
-			.from(
-				shape,
-				{
-					scale: 0.8,
-					ease: 'elastic.out(2,0.4)'
-				},
-				'<'
-			)
-			.to(
-				shape,
-				{
-					y: '120vh',
-					rotation: 'random(-60, 60)',
-					ease: 'back.in(.4)',
-					duration: 1
-				},
-				0
-			);
+		});
 	}
 
 	/* --------------------------------
@@ -39,6 +20,7 @@ const hero = () => {
   
   ------------------------------------*/
 	let images = gsap.utils.toArray('.Hero__image');
+	let Hero = document.querySelector('.Hero');
 	let gap = 200; // if you're nosy though, this number spaces the images out
 	let index = 0;
 	let wrapper = gsap.utils.wrap(0, images.length);
@@ -48,7 +30,7 @@ const hero = () => {
 	let lastMousePos = mousePos;
 	let cachedMousePos = mousePos;
 
-	window.addEventListener('mousemove', (e) => {
+	Hero.addEventListener('mousemove', (e) => {
 		mousePos = {
 			x: e.x,
 			y: e.y

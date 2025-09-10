@@ -7,100 +7,23 @@ import { SplitText } from 'gsap/SplitText';
 //gsap.com/docs/v3/Installation
 
 // remember to register them if you use a plugin!
-gsap.registerPlugin(SplitText);
+// gsap.registerPlugin(SplitText);
 
-const header = () => {
-	let exitTime = 0;
-
-	let anim = gsap
-		.timeline({
-			paused: true,
-			defaults: {
-				ease: 'expo.inOut',
-				duration: 0.8
-			}
-		})
-		.to('.Header__menu-icon', {
-			rotation: 220
-		})
-		.fromTo(
-			'.Menu__list',
-			{
-				xPercent: 0,
-				autoAlpha: 0
-			},
-			{
-				xPercent: -100,
-				stagger: 0.05,
-				autoAlpha: 1
-			},
-			0
-		);
-	let wordSplits = gsap.utils.toArray('[data-anim="split-word"]');
-
-	wordSplits.forEach((word, i) => {
-		let split = SplitText.create(word, {
-			type: 'chars, words',
-			mask: 'words'
-		});
-		anim.from(
-			split.chars,
-			{
-				y: 100,
-				autoAlpha: 0,
-				stagger: 0.01
-			},
-			0.1
-		);
+const menu = () => {
+	let anim = gsap.to('.Menu', {
+		xPercent: -100,
+		autoAlpha: 1,
+		paused: true
 	});
-
-	anim.addPause();
-	exitTime = anim.duration(); // assign the exit time
-
-	anim
-		.to('.Menu__list', {
-			y: () => window.innerHeight * 2,
-			rotation: 'random(-30, 30)',
-			ease: 'expo.in',
-			stagger: {
-				from: 'end',
-				each: 0.1
-			}
-		})
-		.to('.Header__menu-icon', { rotation: 0, ease: 'expo.inOut' }, '<');
-
-	const prefersReducedMotion = window.matchMedia(
-		'(prefers-reduced-motion: reduce)'
-	).matches;
-
-	if (prefersReducedMotion) {
-		anim.timeScale(100);
-	} else {
-		anim.timeScale(1);
-	}
 
 	function openNavigation() {
 		navButton.setAttribute('aria-expanded', 'true');
-		if (anim.time() < exitTime) {
-			anim.play();
-			console.log('OPEN TOGGLE');
-		} else if (anim.time() === anim.totalDuration()) {
-			anim.restart();
-		} else {
-			anim.reverse();
-			console.log('REVERSE UP FROM BOTTOM');
-		}
+		anim.play();
 	}
 
 	function closeNavigation() {
 		navButton.setAttribute('aria-expanded', 'false');
-		if (anim.time() < exitTime) {
-			anim.reverse();
-			console.log('CLOSE TOGGLE');
-		} else {
-			anim.seek(exitTime).play();
-			console.log('CLOSE FALL');
-		}
+		anim.reverse();
 	}
 
 	// No animation stuff down here. Just some nice accessible event handling bits that call the close and enter functions. 💚
@@ -130,4 +53,4 @@ const header = () => {
 	});
 };
 
-export default header;
+export default menu;

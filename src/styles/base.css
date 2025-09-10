@@ -1,3 +1,23 @@
+@font-face {
+	font-display: block;
+	font-family: Mori;
+	font-style: normal;
+	font-weight: 400;
+	src: url(../assets/PPMori-Regular.woff) format("woff");
+}
+
+@font-face {
+	font-display: block;
+	font-family: Mori;
+	font-style: normal;
+	font-weight: 600;
+	src: url(../assets/PPMori-SemiBold.woff) format("woff");
+}
+
+:root {
+	overscroll-behavior: none;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -350,6 +370,12 @@ a {
 	color: inherit;
 }
 
+.heading-lg {
+	font-size: clamp(2.5rem, 6vw, 7rem);
+	font-weight: 600;
+	line-height: 1.1;
+}
+
 .heading-xl {
 	font-size: clamp(2.5rem, 13vw, 13rem);
 	font-weight: 600;
@@ -390,14 +416,14 @@ a {
 /* gsap scrolltrigger marker styles */
 .gsap-marker-end,
 .gsap-marker-scroller-end {
-	font-family: 'Mori' !important;
+	font-family: Mori !important;
 	color: #fa7777 !important;
 	border-color: #fa7777 !important;
 }
 
 .gsap-marker-start,
 .gsap-marker-scroller-start {
-	font-family: 'Mori' !important;
+	font-family: Mori, sans-serif !important;
 	color: #abff84 !important;
 	border-color: #abff84 !important;
 }

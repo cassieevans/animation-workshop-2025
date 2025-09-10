@@ -1,5 +1,12 @@
+import menu from './scripts/menu';
 import hero from './scripts/hero';
-import header from './scripts/header';
+import scroll from './scripts/scroll';
+import goodbye from './scripts/goodbye';
 
-header();
+menu();
 hero();
+scroll();
+
+document.fonts.ready.then((fontFaceSet) => {
+	goodbye();
+});
