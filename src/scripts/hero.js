@@ -11,6 +11,9 @@ const hero = () => {
 		tl.from(img, {
 			opacity: 0,
 			duration: 0.1
+		}).to(img, {
+			opacity: 0,
+			duration: 0.1
 		});
 	}
 

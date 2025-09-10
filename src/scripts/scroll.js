@@ -19,10 +19,10 @@ const scroll = () => {
 				scrub: 1,
 				pin: wrapper,
 				pinSpacing: false,
-				markers: {
-					indent: 100 * i,
-					fontSize: '14px'
-				},
+				// markers: {
+				// 	indent: 100 * i,
+				// 	fontSize: '14px'
+				// },
 				id: i + 1
 			}
 		});

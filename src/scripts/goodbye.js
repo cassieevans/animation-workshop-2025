@@ -22,9 +22,7 @@ const goodbye = () => {
 
 	split.chars.forEach((char) => {
 		gsap.from(char, {
-			yPercent: 'random(-100, 100)',
-			rotation: 'random(-10, 10)',
-			ease: 'back.out(1.2)',
+			scale: 0,
 			scrollTrigger: {
 				trigger: char,
 				containerAnimation: scrollTween,
